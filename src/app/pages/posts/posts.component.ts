@@ -12,6 +12,10 @@ export class PostsComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.messages = this.dataService.getPosts(); //.subscribe((posts) => (this.messages = posts));
+    this.messages = this.dataService.getPosts();
+  }
+
+  listenClick(id: any) {
+    console.log('Click en:', id);
   }
 }

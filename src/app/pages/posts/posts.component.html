@@ -3,5 +3,6 @@
   <app-post
     *ngFor="let message of messages | async"
     [message]="message"
+    (clickPost)="listenClick($event)"
   ></app-post>
 </ul>
