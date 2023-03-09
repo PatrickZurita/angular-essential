@@ -7,9 +7,11 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { PagesModule } from './pages/pages.module';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [AppComponent, MenuComponent],
-  imports: [BrowserModule, AppRoutingModule, PagesModule],
+  imports: [BrowserModule, AppRoutingModule, PagesModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
