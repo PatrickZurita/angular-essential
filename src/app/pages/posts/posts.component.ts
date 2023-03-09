@@ -7,11 +7,11 @@ import { DataService } from '../../services/data.service';
   styleUrls: ['./posts.component.css'],
 })
 export class PostsComponent implements OnInit {
+  messages: any = [];
+
   constructor(private dataService: DataService) {}
 
-  ngOnInit(): void {
-    this.dataService.getPosts().subscribe((posts) => {
-      console.log(posts);
-    });
+  ngOnInit() {
+    this.messages = this.dataService.getPosts(); //.subscribe((posts) => (this.messages = posts));
   }
 }
